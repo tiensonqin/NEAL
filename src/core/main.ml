@@ -68,7 +68,7 @@ let main rules providers reporters stdin filelist print_ast strict strict_parse 
   let files' =
     match filelist with
     | None -> files
-    | Some file -> Core.Std.In_channel.read_lines file
+    | Some file -> Core.In_channel.read_lines file
   in
   let rule_step =
     match rules with

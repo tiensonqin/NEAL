@@ -3319,7 +3319,7 @@ let topLevelDeclaration () =
 let parse file input =
   isParsingPattern := false;
   patternDepth := 0;
-  match parse_only (topLevelDeclaration ()) (`String input) with
+  match parse_string (topLevelDeclaration ()) input with
   | Ok ast ->
       let program = extractNode ast in
       let comments' = get_comments () in
